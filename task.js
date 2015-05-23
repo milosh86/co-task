@@ -1,14 +1,14 @@
 function task(gen) {
-	if(typeof gen !== 'function' || typeof gen().next !== 'function') {
-		return Promise.reject(new TypeError('Invalid argument, expecting generator function.'));
-	}
+    if(typeof gen !== 'function' || typeof gen().next !== 'function') {
+        return Promise.reject(new TypeError('Invalid argument, expecting generator function.'));
+    }
 	
-	var g = gen(),
-	ret,
-	lastValue,
-	lastError;
-		
-	function setValue(val) {
+    var g = gen(),
+        ret,
+        lastValue,
+        lastError;
+        
+    function setValue(val) {
 		lastValue = val;
 		lastError = null;
 	}
