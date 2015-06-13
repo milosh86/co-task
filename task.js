@@ -43,10 +43,10 @@ function task(gen) {
 
             ret.value.then(function succes(value) {
                 setValue(value)
-                return run();
+                run();
             }, function error(err) {
                 setError(err);
-                return run();
+                run();
             });
         })();
     });
