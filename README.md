@@ -68,7 +68,9 @@ task(function* () {
 .catch(function errorHandler(error) {
     // task failed, handle error...
 });
+```
 
+```
 // ... using generator delegation
 function* getX() {
     var a = yield pAsyncFn(1);
