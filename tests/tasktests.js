@@ -110,3 +110,31 @@ QUnit.test("can compose multiple tasks within each other", function (assert) {
         done();
     });
 });
+
+QUnit.test("can use generator delegation instead of nesting tasks", function (assert) {
+    "use strict";
+    var done = assert.async();
+    
+    function* getX() {
+        var a = yield pAsyncFn(1);
+        var b = yield pAsyncFn(2);
+        return a + b;
+    };
+    
+    function* getY() {
+        return yield pAsyncFn(3);
+    };
+
+    task(function* () {
+        var x, y;
+
+        x = yield* getX();
+
+        y = yield* getY();
+
+        return x + y;
+    }).then(function (result) {
+        assert.equal(result, 6, 'Got correct result...6');
+        done();
+    });
+});
