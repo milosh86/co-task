@@ -71,7 +71,7 @@ task(function* () {
 ```
 
 ```
-// ... using generator delegation
+// ... using generator delegation instead of nesting tasks
 function* getX() {
     var a = yield pAsyncFn(1);
     var b = yield pAsyncFn(2);
