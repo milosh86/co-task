@@ -1,7 +1,7 @@
 # co-task
 Simple implementation of cooperative tasks.
 
-Generators, one of the most important additions to EcmaScript standard in ES6, have couple of interesting use cases. One of them is simplified iterator implementation (generators produce both iterators and iterables) and the second one is simplification of async code. Generators introduced cooperative concurrency model in JS. When this is combined with Promises, we get extremely powerful way of handling async operations in JS. Here, I tried to implement this concept by myself for practicing purposes. 
+Generators, one of the most important additions to EcmaScript standard in ES6, have couple of interesting use cases. One of them is simplified iterator implementation (generators produce both iterators and iterables) and the second one is simplification of async code. Generators introduced cooperative concurrency model in JS. When this is combined with Promises, we get extremely powerful way of handling async operations in JS. Here, I implemented this concept for fun and practicing purposes. 
 
 # Examples
 See tests for more examples.
